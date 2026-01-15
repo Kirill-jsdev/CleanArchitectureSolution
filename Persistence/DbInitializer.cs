@@ -1,12 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain;
 
 namespace Persistence
 {
-    internal class DbInitializer
+    public static class DbInitializer
     {
+        public static void Seed(AppDbContext context)
+        {
+            if (!context.Activities.Any())
+            {
+                var activity = new Activity
+                {
+                    Title = "Sample Activity",
+                    Date = DateTime.UtcNow,
+                    Description = "This is a sample activity.",
+                    Category = "General",
+                    IsCancelled = false,
+                    City = "Sample City",
+                    Venue = "Sample Venue",
+                    Latitude = 0.0,
+                    Longitude = 0.0
+                };
+
+                context.Activities.Add(activity);
+                context.SaveChanges();
+            }
+        }
     }
 }

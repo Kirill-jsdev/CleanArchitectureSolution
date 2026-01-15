@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Diagnostics;
+using Domain;
 
 namespace Persistence
 {
