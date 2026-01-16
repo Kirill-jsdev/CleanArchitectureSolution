@@ -18,9 +18,9 @@ using (var scope = app.Services.CreateScope())
     try
     {
         var context = services.GetRequiredService<AppDbContext>();
-        context.Database.Migrate();
+        await context.Database.EnsureCreatedAsync();
 
-        if (!context.Activities.Any())
+        if (!await context.Activities.AnyAsync())
         {
             DbInitializer.Seed(context);
         }

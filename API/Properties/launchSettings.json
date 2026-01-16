@@ -9,7 +9,7 @@
       "launchUrl": "api/test",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ConnectionStrings__DefaultConnection": "Host=localhost;Port=5432;Database=cleanarchdb;Username=postgres;Password=postgrespw"
+        "ConnectionStrings__DefaultConnection": "Host=localhost;Port=5433;Database=postgres;Username=postgres;Password=postgres"
       }
     }
   }
