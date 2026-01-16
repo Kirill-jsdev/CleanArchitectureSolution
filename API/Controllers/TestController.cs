@@ -13,5 +13,11 @@ namespace API.Controllers
         {
             return Ok("Hello, World!");
         }
+
+        [HttpGet("/activities")]
+        public IActionResult GetActivityList()
+        {
+            return Ok("Hello, World!");
+        }
     }
 }
