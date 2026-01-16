@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Activities\Commands\" />
-    <Folder Include="Activities\DTOs\" />
   </ItemGroup>
 
   <ItemGroup>
