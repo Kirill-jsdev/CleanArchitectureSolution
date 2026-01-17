@@ -9,7 +9,7 @@ using Persistence;
 
 namespace Application.Activities.Queries
 {
-    internal class GetActivityList
+    public class GetActivityList
     {
         public class Query : IRequest<Result<List<ActivityDto>>>
         {
