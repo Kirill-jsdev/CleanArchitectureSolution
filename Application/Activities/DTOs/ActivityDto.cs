@@ -1,9 +1,11 @@
 ﻿
+using Domain;
+
 namespace Application.Activities.DTOs;
 
 public class ActivityDto
 {
-    public required string Id { get; set; }
+    public required string ActivityId { get; set; }
     public required string Title { get; set; }
     public DateTime Date { get; set; }
     public required string Description { get; set; }
@@ -15,5 +17,9 @@ public class ActivityDto
     public required string Place { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
+
+    public required string CreatedByUserId { get; set; }
+
+    public User? CreatedBy { get; set; }
 
 }

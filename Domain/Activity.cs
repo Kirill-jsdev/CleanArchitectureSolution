@@ -8,7 +8,7 @@ namespace Domain
 {
     public class Activity
     {
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public string ActivityId { get; set; } = Guid.NewGuid().ToString();
         public required string Title { get; set; }
         public DateTime Date { get; set; }
         public required string Description { get; set; }
@@ -19,5 +19,11 @@ namespace Domain
         public required string Place { get; set; }
         public  double Latitude { get; set; }
         public  double Longitude { get; set; }
+
+        //Foreign key
+        public required string CreatedByUserId { get; set; }
+
+        //Navigation property
+        public User? CreatedBy {  get; set; }
     }
 }

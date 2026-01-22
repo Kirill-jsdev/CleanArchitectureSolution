@@ -10,6 +10,7 @@ namespace Persistence
             {
                 var activity = new Activity
                 {
+                    ActivityId = "gfdfgdfgd",
                     Title = "Sample Activity",
                     Date = DateTime.UtcNow,
                     Description = "This is a sample activity.",
@@ -18,7 +19,8 @@ namespace Persistence
                     City = "Sample City",
                     Place = "Sample Venue",
                     Latitude = 0.0,
-                    Longitude = 0.0
+                    Longitude = 0.0,
+                    CreatedByUserId = "admin_user"
                 };
 
                 context.Activities.Add(activity);
