@@ -1,4 +1,5 @@
 ﻿
+using Application.Users;
 using Domain;
 
 namespace Application.Activities.DTOs;
@@ -20,6 +21,6 @@ public class ActivityDto
 
     public required string CreatedByUserId { get; set; }
 
-    public User? CreatedBy { get; set; }
+    public UserSummaryDto? CreatedBy { get; set; }
 
 }
