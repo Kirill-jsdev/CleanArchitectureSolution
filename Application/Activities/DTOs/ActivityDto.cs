@@ -1,5 +1,4 @@
-﻿
-using Application.Users;
+﻿using Application.Users.DTOs;
 using Domain;
 
 namespace Application.Activities.DTOs;
