@@ -16,7 +16,7 @@ namespace Persistence
                     Category = "General",
                     IsCancelled = false,
                     City = "Sample City",
-                    Venue = "Sample Venue",
+                    Place = "Sample Venue",
                     Latitude = 0.0,
                     Longitude = 0.0
                 };
