@@ -1,5 +1,6 @@
 using Application.Activities.Queries;
 using Application.Core;
+using Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence;
@@ -18,6 +19,9 @@ builder.Services.AddMediatR(cfg =>
 
 // Register AutoMapper
 builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfiles).Assembly);
+
+// Register HttpClient for JsonPlaceholderService
+builder.Services.AddHttpClient<JsonPlaceholderService>();
 
 
 var app = builder.Build();

@@ -1,4 +1,5 @@
 ﻿using Application.Activities.Queries;
+using Application.RandomStuff.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -32,6 +33,19 @@ namespace API.Controllers
             if (!result.IsSuccess)
             {
                 return BadRequest(result.Error);
+            }
+
+            return Ok(result.Value);
+        }
+
+        [HttpGet("/test")]
+        public async Task<IActionResult> GetJsonPlaceholderData()
+        {
+            var result = await _mediator.Send(new GetJsonPlaceholderPost.Query());
+
+            if (!result.IsSuccess)
+            {
+                return StatusCode(result.Code, result.Error);
             }
 
             return Ok(result.Value);
